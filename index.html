@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wayne Richards Plastering | Plasterer in New Hartley, Whitley Bay and South East Northumberland</title>
+  <meta name="description" content="Wayne Richards Plastering Services, New Hartley. All aspects of plastering plus small joinery jobs across Whitley Bay, Seaton Delaval, Blyth, Cramlington and North Tyneside. 100% recommended. Free quotes.">
+
+  <style>
+    /* ============================================
+       EDIT ME: colours live here.
+       ============================================ */
+    :root {
+      --forest: #1f3d2e;      /* deep green, headings and dark sections */
+      --forest-2: #2e5741;
+      --sand: #d9a441;        /* warm sand accent */
+      --sand-dark: #b8862f;
+      --ink: #26302b;
+      --muted: #66736c;
+      --paper: #ffffff;
+      --oat: #f5f3ec;         /* light section background */
+      --line: #e2e5df;
+      --green: #25D366;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    a { color: var(--sand-dark); }
+    h1, h2, h3 { line-height: 1.15; margin: 0 0 0.5em; color: var(--forest); }
+    h1 { font-size: 2.6rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.1rem; }
+    p { margin: 0 0 1em; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 64px 0; }
+    .alt { background: var(--oat); }
+    .sub { color: var(--muted); max-width: 640px; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .brand { text-decoration: none; color: var(--forest); font-weight: 800; font-size: 1.15rem; display: flex; align-items: center; gap: 10px; }
+    .brand .mark { width: 32px; height: 32px; }
+    .brand small { display: block; font-weight: 500; font-size: 0.72rem; color: var(--muted); letter-spacing: 1px; line-height: 1; }
+    nav a { margin-left: 20px; text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+    nav a:hover { color: var(--forest); }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 6px; background: var(--sand); color: var(--forest); font-weight: 700; text-decoration: none; transition: background 0.15s; }
+    .btn:hover { background: var(--sand-dark); color: #fff; }
+    .btn-wa { background: var(--green); color: #fff; }
+    .btn-wa:hover { background: #1DA851; }
+    .btn svg { width: 20px; height: 20px; }
+    .btn-outline { background: transparent; border: 2px solid rgba(255,255,255,0.55); color: #fff; }
+    .btn-outline:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    /* Hero */
+    .hero { padding: 110px 0; color: #dfe7e1; position: relative; overflow: hidden; background: linear-gradient(135deg, var(--forest) 0%, var(--forest-2) 100%); }
+    .hero::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.45; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 6px 6px; }
+    .hero .wrap { position: relative; }
+    .hero h1 { color: #fff; }
+    .hero .lead { font-size: 1.2rem; max-width: 600px; color: #c5d2c9; }
+    .hero .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(217,164,65,0.18); color: #f0cc85; border: 1px solid rgba(217,164,65,0.45); font-size: 0.85rem; font-weight: 700; padding: 6px 12px; border-radius: 999px; margin-bottom: 18px; }
+    .stars { color: #f0cc85; letter-spacing: 1px; }
+
+    /* Grid */
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 22px; border-top: 4px solid var(--sand); }
+    .card h3 { margin-bottom: 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+    /* Why */
+    .why { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .why div { border-left: 4px solid var(--sand); padding-left: 16px; }
+    .why strong { display: block; color: var(--forest); font-size: 1.05rem; margin-bottom: 4px; }
+
+    /* Gallery */
+    .gallery { display: grid; gap: 10px; grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 600px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+    .gallery .ph { aspect-ratio: 1; border-radius: 8px; overflow: hidden; position: relative; background: linear-gradient(160deg, #e3ddd2, #b9b0a2); display: flex; align-items: flex-end; padding: 12px; color: #fff; font-size: 0.85rem; font-weight: 600; }
+    .gallery .ph::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(0,0,0,0.05) 1px, transparent 1px); background-size: 5px 5px; }
+    .gallery .ph span { position: relative; background: rgba(31,61,46,0.78); padding: 4px 10px; border-radius: 4px; }
+    .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 8px; display: block; }
+
+    /* Reviews */
+    .reviews { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .review { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+    .review .stars { color: var(--sand); display: block; margin-bottom: 8px; }
+    .review p { margin: 0 0 8px; font-style: italic; }
+    .review small { color: var(--muted); }
+
+    /* Areas */
+    .areas { display: flex; flex-wrap: wrap; gap: 8px; }
+    .areas span { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; font-size: 0.92rem; }
+
+    /* Contact */
+    .contact-box { background: var(--forest); color: #dfe7e1; border-radius: 12px; padding: 36px; text-align: center; }
+    .contact-box h2 { color: #fff; }
+    .contact-box .num { font-size: 2rem; font-weight: 800; color: #f0cc85; margin: 6px 0 2px; text-decoration: none; display: block; }
+    .contact-box .em { color: #c5d2c9; margin-bottom: 18px; }
+    .contact-box .em a { color: #fff; }
+    .contact-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    .wa-float { position: fixed; right: 20px; bottom: 20px; width: 56px; height: 56px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .wa-float svg { width: 28px; height: 28px; }
+
+    footer { background: var(--forest-2); color: #aebbb2; padding: 32px 0; font-size: 0.9rem; }
+    footer a { color: #dfe7e1; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      nav { display: none; }
+      .hero { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="6" fill="#1f3d2e"/><text x="16" y="21" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="13" fill="#f0cc85">WR</text></svg>
+        <span>Wayne Richards<small>PLASTERING SERVICES</small></span>
+      </a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#work">Recent work</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="pill"><span class="stars">★★★★★</span> 100% recommended on Facebook</span>
+      <h1>All aspects of plastering,<br>done the proper way.</h1>
+      <p class="lead">
+        Time served plasterer based in New Hartley, working across Whitley Bay, Seaton Delaval, Blyth,
+        Cramlington and North Tyneside. Skimming, boarding, rendering and the small joinery jobs that go with it.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#contact">Get a free quote</a>
+        <a class="btn btn-outline" href="#work">See recent work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="wrap">
+      <h2>What I do</h2>
+      <p class="sub">From patching a hole to plastering a whole house. If it's plaster, I do it.</p>
+      <div class="grid">
+        <div class="card"><h3>Skimming and re-plastering</h3><p>Walls and ceilings skimmed smooth over old plaster, Artex or fresh board. Ready to paint.</p></div>
+        <div class="card"><h3>Plasterboarding</h3><p>Boarding new walls and ceilings, dot and dab, stud work, overboarding cracked ceilings.</p></div>
+        <div class="card"><h3>Rendering</h3><p>Traditional sand and cement render and modern render systems. External walls, garden walls and repairs.</p></div>
+        <div class="card"><h3>Repairs and patching</h3><p>Holes from rewires and plumbing, water damage, cracks and blown plaster made good and blended in.</p></div>
+        <div class="card"><h3>Small joinery jobs</h3><p>Stud walls, boxing in pipes, door linings, skirting and architrave. The bits that come up mid job, sorted without another trade.</p></div>
+        <div class="card"><h3>Extensions and refurbs</h3><p>Plastering out new extensions, loft conversions and full house refurbishments for homeowners and builders.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHY ===================== -->
+  <section class="alt">
+    <div class="wrap">
+      <h2>Why people use Wayne</h2>
+      <div class="why">
+        <div><strong>Time served</strong>Years on the trowel, including the old school sand and cement work most don't do any more.</div>
+        <div><strong>Plaster and joinery</strong>One person for the plastering and the small carpentry jobs around it.</div>
+        <div><strong>Fixed price</strong>Free quote, price agreed before I start.</div>
+        <div><strong>Tidy</strong>Sheets down, mess kept in one room, rubbish taken away.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section id="work">
+    <div class="wrap">
+      <h2>Recent work</h2>
+      <p class="sub">A few recent jobs. Lots more on <a href="https://www.facebook.com/waynerichardsplastering" target="_blank" rel="noopener">Facebook</a>.</p>
+      <!-- EDIT ME: replace each placeholder with <img src="photos/1.jpg" alt="..."> using real photos from the Facebook page -->
+      <div class="gallery">
+        <div class="ph"><span>Sand and cement render</span></div>
+        <div class="ph"><span>Living room skim</span></div>
+        <div class="ph"><span>Overboarded ceiling</span></div>
+        <div class="ph"><span>Extension plastered out</span></div>
+        <div class="ph"><span>Patch repair, blended</span></div>
+        <div class="ph"><span>Stud wall and skim</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== REVIEWS ===================== -->
+  <section id="reviews" class="alt">
+    <div class="wrap">
+      <h2>What customers say</h2>
+      <p class="sub">100% recommended on Facebook.</p>
+      <!-- EDIT ME: swap for real reviews copied from the Facebook page -->
+      <div class="reviews">
+        <div class="review"><span class="stars">★★★★★</span><p>"Skimmed the whole downstairs. Walls are like glass, and he boxed in the pipework while he was at it. Top job."</p><small>Facebook review, Seaton Delaval</small></div>
+        <div class="review"><span class="stars">★★★★★</span><p>"Turned up on time every day, tidy, fair price. Ceiling looks brand new."</p><small>Facebook review, Whitley Bay</small></div>
+        <div class="review"><span class="stars">★★★★★</span><p>"Rendered the back of the house properly, not the quick way. Would definitely use again."</p><small>Facebook review, Blyth</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AREAS ===================== -->
+  <section id="areas">
+    <div class="wrap">
+      <h2>Areas covered</h2>
+      <p class="sub">Based in New Hartley. Covering the coast, South East Northumberland and North Tyneside.</p>
+      <div class="areas">
+        <span>New Hartley</span><span>Seaton Delaval</span><span>Seaton Sluice</span><span>Whitley Bay</span><span>Monkseaton</span>
+        <span>Blyth</span><span>Cramlington</span><span>Shiremoor</span><span>Killingworth</span><span>North Shields</span><span>Newcastle</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Get a free quote</h2>
+        <p>Send a couple of photos and rough sizes and I'll come back with a price.</p>
+        <a class="num" href="tel:+447971108854">07971 108854</a>
+        <p class="em"><a href="mailto:wayner8tmk@gmail.com">wayner8tmk@gmail.com</a></p>
+        <div class="contact-actions">
+          <a class="btn btn-wa" href="https://wa.me/447971108854?text=Hi%20Wayne%2C%20can%20I%20get%20a%20quote%20for%20some%20plastering%3F" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L4 21l1.6-4.4A8.5 8.5 0 1 1 21 12z"/><path d="M9.5 9.5c.3 2.4 2.1 4.2 4.5 4.5l1.2-1.2 2 .8v1.7c-3.9.4-8.4-4.1-8-8h1.7l.8 2z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn" href="tel:+447971108854">Call</a>
+          <a class="btn" style="background:#2e5741;color:#fff" href="https://www.facebook.com/waynerichardsplastering" target="_blank" rel="noopener">Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a class="wa-float" href="https://wa.me/447971108854" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L4 21l1.6-4.4A8.5 8.5 0 1 1 21 12z"/><path d="M9.5 9.5c.3 2.4 2.1 4.2 4.5 4.5l1.2-1.2 2 .8v1.7c-3.9.4-8.4-4.1-8-8h1.7l.8 2z"/></svg>
+  </a>
+
+  <footer>
+    <div class="wrap">
+      Wayne Richards Plastering Services &middot; New Hartley, Whitley Bay &middot; 07971 108854<br>
+      <small>Website by <a href="https://sunnymeadgroup.co.uk">Sunnymead Web</a></small>
+    </div>
+  </footer>
+
+</body>
+</html>
